@@ -216,7 +216,7 @@ Parameters:
 ======================================
 */
 
-int Pieces::GetXinitialPosition(int pPiece, int pRotation) {
+int Pieces::GetXInitialPosition(int pPiece, int pRotation) {
   return mPiecesInitialPosition[pPiece][pRotation][0];
 }
 
@@ -233,6 +233,6 @@ Parameters:
 ======================================
 */
 
-int Pieces::GetYinitialPosition(int pPiece, int pRotation) {
+int Pieces::GetYInitialPosition(int pPiece, int pRotation) {
   return mPiecesInitialPosition[pPiece][pRotation][1];
 }
