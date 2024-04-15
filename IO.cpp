@@ -114,30 +114,4 @@ int IO::IsKeyDown(int pKey) {
 SDL Graphical Initialization
 ======================================
 */
-int IO::InitGraph() {
-  const SDL_VideoInfo *info;
-  uint8_t video_bpp;
-  uint32_t videoflags;
-
-  // Initialize SDL
-  if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-    fprintf(stderr, "Couldn't initialize SDL: %s\n", SDL_GetError());
-    return 1;
-  }
-  atexit(SDL_Quit);
-
-  // Alpha blending doesn't work well at 8-bit color
-  info = SDL_GetVideoInfo();
-  if (info->vfmt->BitsPerPixel > 8) {
-    video_bpp = info->vfmt->BitsPerPixel;
-  } else {
-    video_bpp = 16;
-  }
-  videoflags = SDL_SWSURFACE | SDL_DOUBLEBUF;
-
-  // Set 640x480 video mode
-  SDL_Window *screen = SDL_CreateWindow("Tetris", SDL_WINDOWPOS_UNDEFINED,
-                                        SDL_WINDOWPOS_UNDEFINED, 640, 480,
-                                        video_bpp, videoflags);
-  return 0;
-}
+int IO::InitGraph() { return 0; }
